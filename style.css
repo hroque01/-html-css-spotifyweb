@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    z-index: -500;
+    /* debug */
+}
+
+main {
+    display: flex;
+}
+
+header{
+    width: calc(100vw - 200px);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* debug */
+    background-color:  #080b1293;;
+}
+
+.comandi-laterali {
+    width: 230px;
+    height: calc(100vh - 90px);
+    /* debug */
+    background-color: #000000;
+}
+
+.contenuto {
+    width: 100%;
+    height: calc(100vh - 90px);
+    margin-top: 0px;
+    /* debug */
+    background-color: #141922;
+}
+
+#player {
+    width: 100%;
+    height: 90px;
+    /* debug */
+    background-color: #282828;
+}
