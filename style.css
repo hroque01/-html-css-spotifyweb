@@ -13,7 +13,8 @@
     height: 100vh;
 }
 
-main { display: flex;}
+main { width: 100vw;
+height: 100vh;}
 
 header{
     width: calc(100% - 230px);
@@ -35,7 +36,7 @@ header{
 }
 
 .contenuto {
-    width: 100%;
+    width: calc(100vw - 230px);
     height: calc(100vh - 90px);
     margin-top: 0px;
     background-color: #141922;
@@ -48,7 +49,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
     background-color: #282828;
     position: relative;
     z-index: 500;
@@ -56,7 +57,9 @@ header{
 
 ul { list-style: none;}
 
-
+.container-flex {
+    display: flex;
+}
 /****************************************************
                     HEADER
 *****************************************************/
@@ -219,35 +222,39 @@ ul { list-style: none;}
                     PLAYER
 *****************************************************/
 #songs {
-    width: 300px;
-    min-height: 100%;
+    max-width: 35%;
     display: flex;
     align-items: center;
     color: #626262;
 }
 
-    #songs > img {
-        width: 50px;
-        height: 50px;
+   .prova {
+    max-width: 40px;
+   }
+
+    .prova > img {
+       max-width: 100%;
     }
     
-    #brano { margin-left: 10px;}
+    #brano { margin-left: 5%;}
 
     #brano > h4 { color: white;}
 
     #interazioni {
         font-size: 1.2rem;
         line-height: 32px;
-        padding-left: 20%;
+        margin-left: 5%;
+        display: flex;
     }
 
-    #interazioni i:first-child { padding-right: 10px;}
+    #interazioni i {
+        margin-left: 20%;
+    }
 
     #interazioni i:hover { color: white;}
 
 #commands {
-    width: 650px;
-    height: 70px;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
 }
@@ -255,32 +262,34 @@ ul { list-style: none;}
     #commands-up {
         font-size: 1rem;
         color: #fefefe;
-        height: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 30px;
     }
+
+    #commands-up i { margin-right: 5px;}
     
     #play {font-size: 1.5rem;}
 
     #play:hover {font-size: 2rem;}
 
-    #music-bar {
-        width: 400px;
-    }
 
 .timeline {
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5px;
+    margin: 5px 0;
 }
 
 .timeline > span {
     color: white;
     margin: 0 20px;
 }
+
+    .container-barra {
+        width: 400px;
+    }
 
     .barra {
         border: 2px #595959 solid;
@@ -318,11 +327,32 @@ ul { list-style: none;}
     }
     
 
-#green{
-    width: 300px;
+#volume{
+    width: 15%;
     height: 100%;
-    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+    .icons-player {
+        display: flex;
+        color: white;
+        font-size: 0.8rem;
+    }
+
+    .icons-player i {
+        margin-right: 10px;
+    }
+
+    .container-barra2 {
+        width: 70px;
+    }
+
+
+    .barra-volume {
+        width: 50%;
+    }
 
 
 
@@ -336,6 +366,9 @@ ul { list-style: none;}
     /***********   HEADER ****************/ 
     header { width: calc(100% - 45px);}
 
+    .contenuto {
+        width: calc(100% - 45px);
+    }
     /********  COMANDI LATERALI ********/ 
     .comandi-laterali {
         width: 45px;
@@ -371,4 +404,14 @@ ul { list-style: none;}
         width: 100%;
         margin-left: 4px;
     }
+
+    #interazioni {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #volume-bar {
+        display: none;
+    }
+
 }
