@@ -219,6 +219,66 @@ ul { list-style: none;}
 .profile li:hover a { color: white; }
 
 /****************************************************
+                    MAIN CONTENUTO
+*****************************************************/
+.container-buttons-main {
+    display: flex;
+    justify-content: center;
+    /* debug   */
+    margin-top: 90px;
+    height: 50px;
+}
+
+.buttons-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .buttons-main li > h4 { 
+        font-size: 0.7rem;
+        color: #7d7f84;
+        margin-left: 10px;
+    }
+
+.container-main-playlist {
+    margin: 10px;
+    max-width: 100%;
+    color: white;
+    /* debug */
+    height: 300px;
+    background-color: red;
+}
+
+.container-main-playlist > h3 {
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.container-recent-playlist {
+    display: flex;
+    justify-content: space-between;
+    gap: 13px;
+}
+
+    .container-played {
+        max-width: 100%;
+        width: 180px;
+    }
+
+    .card > img {
+        width: 100%;
+    }
+    
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-text > h5 { color: #626262;}
+   
+/****************************************************
                     PLAYER
 *****************************************************/
 #songs {
@@ -355,8 +415,24 @@ ul { list-style: none;}
     }
 
 
+/***********************
+     MEDIA QUERY 1024px
+************************/
+@media all and (max-width: 1024px) {
+    .container-recent-playlist {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+/***********************
+     MEDIA QUERY 710px
+************************/
 
-
+ @media all and (max-width: 710px) {
+    .buttons-main {
+        flex-wrap: wrap;
+    }
+}
 
 /***********************
      MEDIA QUERY 480px
