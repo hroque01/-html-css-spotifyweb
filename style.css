@@ -40,9 +40,12 @@ header{
     height: calc(100vh - 90px);
     margin-top: 0px;
     background-color: #141922;
+    overflow: auto;
 }
 
-
+.color-for-fonts {
+   color: #626262; 
+}
 /***********   PLAYER ****************/ 
 #player {
     height: 90px;
@@ -245,20 +248,19 @@ ul { list-style: none;}
     margin: 10px;
     max-width: 100%;
     color: white;
-    /* debug */
-    height: 300px;
-    background-color: red;
 }
 
 .container-main-playlist > h3 {
+    font-size: 1.5rem;
     font-weight: bolder;
     margin-bottom: 30px;
 }
 
 .container-recent-playlist {
     display: flex;
-    justify-content: space-between;
-    gap: 13px;
+    gap: 20px;
+    margin-top: 30px;
+
 }
 
     .container-played {
@@ -276,8 +278,17 @@ ul { list-style: none;}
         align-items: center;
     }
 
-    .card-text > h5 { color: #626262;}
-   
+.container-main-playlist.created-for > h3 {
+    margin-bottom: 10px;
+}
+
+.created-for {
+    margin-top: 50px;
+}
+
+
+    
+    
 /****************************************************
                     PLAYER
 *****************************************************/
