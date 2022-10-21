@@ -48,7 +48,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 20px;
     background-color: #282828;
     position: relative;
     z-index: 500;
@@ -83,6 +83,10 @@ ul { list-style: none;}
     font-weight: bold;
 }
 
+.box:hover {
+    padding: 20px;
+}
+
 /****************************************************
                     MAIN
 *****************************************************/
@@ -104,19 +108,13 @@ ul { list-style: none;}
     padding-top: 20px;
 }
 
-#logo-small {
-    display: none;
-}
+#logo-small {display: none;}
 
 /***********   COMANDI PRINCIPALI ****************/   
 
-.container-nav-menu {
-    margin: 20px 0;
-}
+.container-nav-menu {margin: 20px 0;}
 
-.container-nav-menu > li {
-    margin: 10px 0;
-}
+.container-nav-menu > li {margin: 10px 0;}
 
 .logs {
     width: 15%;
@@ -129,27 +127,18 @@ ul { list-style: none;}
     text-decoration: none;
 }
 
-#home {
-    color: white;
-}
+#home {color: white;}
 
-#home-img {
-    filter: brightness(1);
-}
+#home-img {filter: brightness(1);}
 
-.container-nav-menu > li:hover img {
-    filter: brightness(1);
-}
+.container-nav-menu > li:hover img { filter: brightness(1);}
 
-.container-nav-menu > li:hover a {
-    color: white;
-}
+.container-nav-menu > li:hover a { color: white;}
 
 
 
 /***********   PLAYLIST ****************/ 
 #playlist-title {
-    margin-top: 25px;
     color: white;
     font-size: 0.9rem;
 }
@@ -178,9 +167,7 @@ ul { list-style: none;}
     color: #626262;
 }
 
-.links-none {
-    text-decoration: none;
-}
+.links-none { text-decoration: none;}
 
 /***********   PROFILE ****************/ 
 
@@ -197,13 +184,9 @@ ul { list-style: none;}
     padding-left: 10px;
 }
 
-.profile > hr {
-    margin: 10px 0;
-}
+.profile > hr { margin: 10px 0;}
 
-.nav-text > h4 {
-    padding: 5px 0;
-}
+.nav-text > h4 { padding: 5px 0;}
 
 #profile {
     width: 60%;
@@ -226,17 +209,124 @@ ul { list-style: none;}
     color: white;
 }
 
-#crea-playlist:hover {
-    color: white;
+#crea-playlist:hover { color: white;}
+
+.playlist li:hover h4 { color: white; }
+
+.profile li:hover a { color: white; }
+
+/****************************************************
+                    PLAYER
+*****************************************************/
+#songs {
+    width: 300px;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    color: #626262;
 }
 
-.playlist li:hover h4 {
-    color: white;
+    #songs > img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    #brano { margin-left: 10px;}
+
+    #brano > h4 { color: white;}
+
+    #interazioni {
+        font-size: 1.2rem;
+        line-height: 32px;
+        padding-left: 20%;
+    }
+
+    #interazioni i:first-child { padding-right: 10px;}
+
+    #interazioni i:hover { color: white;}
+
+#commands {
+    width: 650px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
 }
 
-.profile li:hover a {
-    color: white;
+    #commands-up {
+        font-size: 1rem;
+        color: #fefefe;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    #play {font-size: 1.5rem;}
+
+    #play:hover {font-size: 2rem;}
+
+    #music-bar {
+        width: 400px;
+    }
+
+.timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
 }
+
+.timeline > span {
+    color: white;
+    margin: 0 20px;
+}
+
+    .barra {
+        border: 2px #595959 solid;
+        height: 0px;
+        border-radius: 2px;
+        display: flex;
+    }
+    
+    .fullbarra {
+        width: 15%;
+        height: 0;
+        border-radius: 2px;
+        position: relative;
+        bottom: 3.5px;
+        right: 2px;
+        display: flex;
+        justify-content: flex-end;
+        color: white;
+        border: 2px #c2c2c2 solid;
+    }
+
+    .fullbarra > i {
+        position: relative;
+        bottom: 8px;
+        left: 10px;
+        display: none;
+    }
+
+    .fullbarra:hover {
+        border: 2px lightgreen solid;
+    }
+
+    .fullbarra:hover i {
+        display: block;
+    }
+    
+
+#green{
+    width: 300px;
+    height: 100%;
+    background-color: green;
+}
+
+
+
+
 
 /***********************
      MEDIA QUERY 480px
@@ -281,3 +371,4 @@ ul { list-style: none;}
         width: 100%;
         margin-left: 4px;
     }
+}
