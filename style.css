@@ -92,6 +92,7 @@ ul { list-style: none;}
 
 .box:hover {
     padding: 20px;
+    cursor: pointer;
 }
 
 /****************************************************
@@ -136,11 +137,21 @@ ul { list-style: none;}
 
 #home {color: white;}
 
-#home-img {filter: brightness(1);}
+#home-img {
+    border-left: 3px solid #a1ed2d;
+    filter: brightness(1);
+}
 
-.container-nav-menu > li:hover img { filter: brightness(1);}
 
-.container-nav-menu > li:hover a { color: white;}
+.container-nav-menu > li:hover img { 
+    filter: brightness(1);
+    cursor: pointer;
+}
+
+.container-nav-menu > li:hover a { 
+    color: white;
+    cursor: pointer;
+}
 
 
 
@@ -148,6 +159,7 @@ ul { list-style: none;}
 #playlist-title {
     color: white;
     font-size: 0.9rem;
+    
 }
 
 #crea-playlist {
@@ -247,9 +259,13 @@ ul { list-style: none;}
 
     .buttons-main li > h4:hover {
         color: white;
+        cursor: pointer;
     }
 
-    #selected { color: white; }
+    #selected { 
+        color: white; 
+        border-bottom: 1px solid #a1ed2d;
+    }
 
 .container-main-playlist {
     margin: 10px;
@@ -287,6 +303,16 @@ ul { list-style: none;}
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
+    }
+
+    .card-text > h3 {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    .card-text > h5 {
+        font-size: 0.7rem;
     }
 
     .overlay {
@@ -311,6 +337,7 @@ ul { list-style: none;}
 
     .container-hover:hover .overlay {
         opacity: 1;
+        cursor: pointer;
       }
 
 .container-main-playlist.created-for > h3 {
@@ -321,6 +348,14 @@ ul { list-style: none;}
     margin-top: 50px;
 }
 
+.rotondo {
+    border-radius: 50%;
+}
+
+.selected-opacity:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
 
 
     
@@ -329,24 +364,35 @@ ul { list-style: none;}
                     PLAYER
 *****************************************************/
 #songs {
-    max-width: 35%;
+    max-width: 25%;
     display: flex;
     align-items: center;
     color: #626262;
 }
 
    .prova {
-    max-width: 40px;
+        max-width: 40px;
+        min-width: 40px;
    }
 
     .prova > img {
        max-width: 100%;
     }
     
-    #brano { margin-left: 5%;}
+    #brano { 
+        display: flex;
+        flex-direction: column;
+        width: 90px;
+        margin-left: 5%;
+    }
 
     #brano > h4 { color: white;}
 
+    #brano  h6:hover {
+        color: white;
+        text-decoration: underline;
+        cursor: pointer;
+    }
     #interazioni {
         font-size: 1.2rem;
         line-height: 32px;
@@ -372,13 +418,17 @@ ul { list-style: none;}
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 5%;
     }
 
     #commands-up i { margin-right: 5px;}
     
     #play {font-size: 1.5rem;}
 
-    #play:hover {font-size: 2rem;}
+    #play:hover {
+        font-size: 2rem;
+        cursor: pointer;
+    }
 
 
 .timeline {
@@ -427,19 +477,21 @@ ul { list-style: none;}
 
     .fullbarra:hover {
         border: 2px lightgreen solid;
+        cursor: pointer;
     }
 
     .fullbarra:hover i {
         display: block;
+        cursor: pointer;
     }
     
 
 #volume{
-    width: 15%;
+    max-width: 25%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: row-reverse;
 }
 
     .icons-player {
@@ -479,8 +531,27 @@ ul { list-style: none;}
     .buttons-main {
         flex-wrap: wrap;
     }
+
+    #interazioni {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
 
+/***********************
+     MEDIA QUERY 615px
+************************/
+@media all and (max-width: 615px) {
+    #interazioni {
+        font-size: 0.8rem;
+        gap: 10px;
+    }
+
+    .timeline > span {
+        margin: 0 20px;
+        font-size: 0.8rem;
+    }
+}
 /***********************
      MEDIA QUERY 480px
 ************************/
@@ -528,13 +599,15 @@ ul { list-style: none;}
         margin-left: 4px;
     }
 
-    #interazioni {
-        flex-direction: column;
-        gap: 10px;
+     /* PLAYER */
+   
+    #brano {
+        font-size: 0.8rem;
+    }
+
+    .prova {
+        max-width: 50px;
     }
     
-    #volume-bar {
-        display: none;
-    }
 
 }
